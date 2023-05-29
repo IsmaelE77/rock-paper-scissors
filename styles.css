@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 body {
     background-color: #e5e5f7;
     background-image:  radial-gradient(#222559 1.35px, transparent 1.35px), radial-gradient(#222559 1.35px, #e5e5f7 1.35px);
@@ -8,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .gameBoard {
@@ -16,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 40px 20px 40px 20px;
+    padding: 40px 20px 100px 20px;
     background-color: #47656bc5;
 }
 .player-choice , .computer-choice {
@@ -27,7 +30,7 @@ body {
     flex-wrap: wrap;
 }
 
-.player-choice > img , .computer-choice  > img {
+.choice {
     width: 40%;
     height: auto;
     min-width: 40px;
@@ -45,12 +48,6 @@ body {
     transform: rotate(3.142rad);
 }
 
-.player-choice:focus {
-    outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 10px #9ecaed;
-}
-
 #VS {
     display: flex;
     margin: 20px;
@@ -61,11 +58,33 @@ body {
     font-size: 300%;
 }
 
+.focus{
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
 .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 16px;
     background-color: aliceblue;
+}
+
+.nav-bar > label {
+    width: 200px;
+    min-width: 50px;
+    border: solid 4px #faebd7;
+    box-shadow: 0 0 10px #f09516;
+    padding: 10px;
+    background-color: #ff8a3656;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(12, 37, 53);
 }
 
 .nav-footer{

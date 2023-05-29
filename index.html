@@ -5,31 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="nav-bar">
-        <label class="round">round : </label>
-        <label class="computerScore">computer score : </label>
-        <label class="playerScore">your score : </label>
-        <label class="tie">tie :</label>
+        <label class="round">round : 0</label>
+        <label class="computerScore">computer score : 0</label>
+        <label class="playerScore">your score : 0</label>
+        <label class="tie">tie : 0</label>
     </div>
     <div class="gameBoard">
         <div class="computer-choice">
-            <img src="resources/rock.png" alt="rock" width="150" height="150">
-            <img src="resources/paper.png" alt="paper" width="150" height="150">
-            <img src="resources/scissors.png" alt="scissors" width="150" height="150">
+            <img data-key = "1" class = "choice" src="resources/rock.png" alt="rock" width="150" height="150">
+            <img data-key = "2" class = "choice" src="resources/paper.png" alt="paper" width="150" height="150">
+            <img data-key = "3" class = "choice" src="resources/scissors.png" alt="scissors" width="150" height="150">
         </div>
         <div id="VS">VS</div>
         <div class="player-choice">
-            <img src="resources/rock.png" alt="rock" width="150" height="150">
-            <img src="resources/paper.png" alt="paper" width="150" height="150">
-            <img id="player-scissors" src="resources/scissors.png" alt="scissors" width="150" height="150">
+            <img data-key = "1" class = "choice" src="resources/rock.png" alt="rock" width="150" height="150">
+            <img data-key = "2" class = "choice" src="resources/paper.png" alt="paper" width="150" height="150">
+            <img data-key = "3" class = "choice" id="player-scissors" src="resources/scissors.png" alt="scissors" width="150" height="150">
         </div>
     </div>
     <div class="nav-footer">
-        <p>Develop By Ismael</p>
+        <p>Developed By Ismael</p>
     </div>
 </body>
 </html>
