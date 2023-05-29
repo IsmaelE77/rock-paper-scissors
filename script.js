@@ -27,19 +27,3 @@ function playRound(playerSelection, computerSelection) {
     else
         return computerSelection==ROCK ? "computer": "player"; 
 }
-
-function game(){
-    let playerWins = 0 ;
-    let computerWins = 0;
-    for(i=0;i<5;i++){
-        let playerChoice = prompt("write number of your choice  :\n 1.Rock 2.Paper 3.Scissors");
-        let result = playRound(playerChoice,getComputerChoice());
-        if(result === "player")
-            playerWins++;
-        else if (result === "computer")
-            computerWins++;   
-    }
-    console.log(`player get ${playerWins}`
-                +` computer get ${computerWins}`);
-}
-game();
