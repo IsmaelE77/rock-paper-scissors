@@ -45,6 +45,12 @@ body {
     transform: rotate(3.142rad);
 }
 
+.player-choice:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
 #VS {
     display: flex;
     margin: 20px;
