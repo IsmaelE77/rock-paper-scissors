@@ -7,7 +7,6 @@ computer = 0;
 player = 0;
 tie = 0;
 
-const wait = ms => new Promise(res => setTimeout(res, ms));
 
 function getComputerChoice(){
     randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -22,6 +21,7 @@ function getComputerChoice(){
             return SCISSORS;
             break;    
     }
+
 }
 
 function selectWinner(playerSelection, computerSelection) {
@@ -37,17 +37,37 @@ function selectWinner(playerSelection, computerSelection) {
 
 
 const choices = document.querySelectorAll('.player-choice .choice');
+const computerChoices = document.querySelectorAll('.computer-choice .choice');
 choices.forEach(choice => choice.addEventListener('click', e => playRound(e)));
 
 function playRound(e) {
-    e.target.classList.add('focus');
-    selectWinner(e.target.dataset.key,getComputerChoice());
     round++;
+    e.target.classList.add('focus');
+    playerChoice = e.target.dataset.key;
+    computerChoice = getComputerChoice();
+    selectWinner(playerChoice,computerChoice);
+
+    choices.forEach(choice => {
+        if(choice.dataset.key != playerChoice)
+            choice.classList.add('disabled')
+    });
+    computerChoices.forEach(choice => {
+        if(choice.dataset.key == computerChoice){
+            choice.classList.add('focus');
+            setTimeout(function() {
+                choice.classList.remove('focus');
+            }, 2500);
+        }else{
+            choice.classList.add('disabled');
+        }
+    });
     updateStatus();
     setTimeout(function() {
         e.target.classList.remove('focus');
+        choices.forEach(choice => choice.classList.remove('disabled'));
+        computerChoices.forEach(choice => choice.classList.remove('disabled'));
         welcome();
-    }, 1000);
+    }, 2500);
 }
 
 

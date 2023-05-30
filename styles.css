@@ -113,3 +113,8 @@ body {
     justify-content: center;
     background-color: aliceblue;
 }
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5; 
+}
