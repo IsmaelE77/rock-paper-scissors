@@ -85,7 +85,6 @@ function updateStatus(){
 
 const gameBoard = document.querySelector('.gameBoard');
 const welcomeBoard = document.querySelector('.welcomeBoard');
-
 const newRoundBtn = document.querySelector('#round');
 const startBtn = document.querySelector('#start');
 
