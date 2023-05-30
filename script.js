@@ -38,7 +38,7 @@ function selectWinner(playerSelection, computerSelection) {
 
 const choices = document.querySelectorAll('.player-choice .choice');
 const computerChoices = document.querySelectorAll('.computer-choice .choice');
-choices.forEach(choice => choice.addEventListener('click', e => playRound(e),{once:true}));
+choices.forEach(choice => choice.addEventListener('click', e => playRound(e)));
 
 function playRound(e) {
     round++;
